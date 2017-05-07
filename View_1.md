@@ -28,7 +28,7 @@ class MyButtonListener implements OnClickListener{
 注意：onClickListener导入的是android.view.View.OnClickLitener.
 
 > 3.生成监听器对象
-`MyButtonListener myButtonListener = new MyButtonListener()`
+`MyButtonListener myButtonListener = new MyButtonListener();`
 
 > 4.为控件绑定监听器对象
-`button.setOnClickListener(myButtonListener)`
+`button.setOnClickListener(myButtonListener);`
