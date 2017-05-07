@@ -10,5 +10,22 @@
 对象找出来而已！为什么要向下类型转换(TextView)呢？因为一个布局文件中有各种各样的View,通过findViewById(）方法可以将不同类型控件的对象都找到，所以返回值统一成View类型。
 
 ### 3、设置View的属性
+a.在布局文件中修改       b.在Java代码中修改   textView.setText();           textView.setBackground();
 
-### 4、位View设置监听器
+### 4、为View设置监听器
+什么是监听器呢？一种对象：监控控件对象状态的变化。什么是监控控件对象状态的变化呢？比如当一个按钮被点击、长点击、滑动等事件发生，这样控件就会通知监听器，监听器得到通知后，就会执行一定操作。一个控件可以有多个监听器，因为有多种事件可能发生在某个控件上。那么如何为某个控件设置监听器呢？
+> 1.获取控件对象
+`Button button = (Button)findViewById(R.id.button);`
+> 2.自定义一个监听器类、实现监听器接口
+```java
+class MyButtonListener implements OnClickListener{
+   public void onClick(void){     //覆写 onClickListener中的方法
+   }
+}
+```
+注意：onClickListener导入的是android.view.View.OnClickLitener.
+> 3.生成监听器对象
+`MyButtonListener myButtonListener = new MyButtonListener()`
+
+> 4.为控件绑定监听器对象
+`button.setOnClickListener(myButtonListener)`
