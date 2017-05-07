@@ -28,3 +28,12 @@ sp:随着用户设置的字体大小而改变。
 padding:内边距(控件边缘和空间内容的距离)
 layout_margin:外边距（控件边缘和另一个控件边缘的距离）
 
+> setText(i + "");  setText本来只能显示字符串，这里使用了一个 + “”的技巧
+布局文件(layout)中的每一个控件必然对应Java代码(MainActivity)中的一个对象，对象通过调用不同的方法来修
+
+改控件。
+setText
+setBackground
+
+wrap_content:包含自己的内容
+match_parent:匹配父控件
